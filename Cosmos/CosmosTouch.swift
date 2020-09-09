@@ -22,13 +22,17 @@ struct CosmosTouch {
       starSize: settings.starSize,
       starMargin: settings.starMargin)
     
-    if settings.fillMode == .half {
-      rating += 0.20
-    }
+//    if settings.fillMode == .half {
+//      rating += 0.20
+//    }
     
-    if settings.fillMode == .full {
-      rating += 0.45
-    }
+//    if settings.fillMode == .quarter {
+        rating += 0.1
+//    }
+    
+//    if settings.fillMode == .full {
+//      rating += 0.45
+//    }
     
     rating = CosmosRating.displayedRatingFromPreciseRating(rating,
       fillMode: settings.fillMode, totalStars: settings.totalStars)

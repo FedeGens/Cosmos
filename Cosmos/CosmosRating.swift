@@ -40,14 +40,17 @@ struct CosmosRating {
   
   */
   static func roundFillLevel(_ starFillLevel: Double, fillMode: StarFillMode) -> Double {
-    switch fillMode {
-    case .full:
-      return Double(round(starFillLevel))
-    case .half:
-      return Double(round(starFillLevel * 2) / 2)
-    case .precise :
-      return starFillLevel
-    }
+    return Double(round(starFillLevel * 4) / 4)
+//    switch fillMode {
+//    case .full:
+//      return Double(round(starFillLevel))
+//    case .half:
+//      return Double(round(starFillLevel * 2) / 2)
+//    case .precise :
+//      return starFillLevel
+//    case .quarter:
+//        return Double(round(starFillLevel * 4) / 4)
+//    }
   }
   
   

@@ -68,9 +68,9 @@ struct CosmosAccessibility {
       increment = ceil(rating) - rating
       if increment == 0 { increment = 1 }
 
-    case .half, .precise:
+    case .half, .precise, .quarter:
       increment = (ceil(rating * 2) - rating * 2) / 2
-      if increment == 0 { increment = 0.5 }      
+      if increment == 0 { increment = 0.5 }
     }
     
     if rating >= Double(settings.totalStars) { increment = 0 }
@@ -87,7 +87,7 @@ struct CosmosAccessibility {
       increment = rating - floor(rating)
       if increment == 0 { increment = 1 }
       
-    case .half, .precise:
+    case .half, .precise, .quarter:
       increment = (rating * 2 - floor(rating * 2)) / 2
       if increment == 0 { increment = 0.5 }
     }
